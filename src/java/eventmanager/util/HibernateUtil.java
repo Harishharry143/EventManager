@@ -7,6 +7,7 @@ package eventmanager.util;
 
 
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -14,7 +15,7 @@ import org.hibernate.cfg.Configuration;
  *
  * @author Harish
  */
-public class Util {
+public class HibernateUtil {
     
     private static final SessionFactory sessionFactory;
     
@@ -31,6 +32,14 @@ public class Util {
     
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
+    }
+    public static Session getCurrentSession()
+    {
+        return sessionFactory.getCurrentSession();
+    }
+    public static Session openSession()
+    {
+        return sessionFactory.openSession();
     }
     
 }

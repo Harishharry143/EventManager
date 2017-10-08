@@ -46,5 +46,8 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
     <property name="hibernate.connection.username">eventmanager</property>
     <property name="hibernate.connection.password">password</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="" file="" jar="" package="" resource="eventmanager/domain/Location.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
